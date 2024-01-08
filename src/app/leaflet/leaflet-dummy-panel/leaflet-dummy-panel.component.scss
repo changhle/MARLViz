@@ -1,0 +1,46 @@
+.root-container {
+    width: 370px;
+    font-family: 'Roboto';
+    font-size: 0.8rem;
+}
+
+.view-span {
+    display: inline-block;
+    line-height: 21px;
+    margin-left: 5px;
+}
+
+.view-option {
+    width: 220px;
+    float: right;
+    margin-right: 5px;
+}
+
+.option-div {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.option-div-clear {
+    margin-top: 30px;
+    margin-left: 7px;
+    clear: both;
+}
+
+.x-mark {
+    font-family: Arial;
+    font-size: 0.6rem;
+}
+
+input[type="checkbox"], label {
+    float: left;
+    line-height: 1.6em;
+    height: 1.6em;
+    margin: 0px 2px;
+    padding: 0px;
+    font-size: inherit;
+}
+
+input[type="checkbox"] {
+    clear: left;
+}

@@ -1,0 +1,91 @@
+<div class='root-container d-flex-ni flex-column'>
+
+    <!-- Header -->
+    <nav class="nav-main navbar navbar-light bg-light d-flex-ni" style="padding: 0;">
+        <div style='width: 220px'>
+            <span class="navbar-brand" style='margin-left: 20px; font-size: 1.7rem;'>AI-VIS</span>
+
+            <div class='status-lamp-container'>
+                <div class='status-lamp' [ngClass]="{
+                        'status-lamp-red': isServerConnected === false,
+                        'status-lamp-green': isServerConnected === true
+                    }">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class='content-body d-flex-ni flex-grow-1'>
+        
+        <!-- <div class="d-flex-ni flex-grow-1 rel">
+            <user-list-view></user-list-view>
+        </div> -->
+<!-- 
+        <div class="d-flex-ni flex-grow-1 flex-column" >
+            <div class="rel" style="height: 400px;">
+                <workout-matrix-view></workout-matrix-view>
+            </div>
+        </div> -->
+        <div class='d-flex-ni flex-grow-1 rel'>
+            <record-list-view></record-list-view>
+        </div>
+        <!-- <div class='d-flex-ni flex-grow-1 rel'>
+            <record-sub-view></record-sub-view>
+        </div> -->
+        
+    </div>
+    <!-- <div class='content-body d-flex-ni flex-grow-1'>
+        
+        <div class="d-flex-ni rel" style="width: 210px;">
+            <user-list-view></user-list-view>
+        </div>
+
+        <div class="d-flex-ni flex-grow-1 flex-column" >
+            <div class="rel" style="height: 400px;">
+                <workout-matrix-view></workout-matrix-view>
+            </div>
+
+            <div class="d-flex-ni flex-grow-1">
+                <div class='d-flex-ni rel' style="width: 300px;">
+                    <record-list-view></record-list-view>
+                </div>
+                <div class='d-flex-ni flex-grow-1 rel'>
+                    <temporal-view></temporal-view>
+                </div>
+            </div>
+        </div>
+        
+    </div> -->
+
+    <!-- Bottom Bar -->
+    <div class='d-flex-ni bottom-bar' >
+
+        <div class='d-flex-ni' style="font-family: Roboto; margin-left: 10px;">
+            <div class="bottom-loading-text" [hidden]="!isWaiting">{{waitingMessage}}</div>
+            <div class="{{isWaiting | spinnerclass}}" style='margin-top: 3px;' role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        
+
+        <div class='flex-grow-1'></div>
+
+        <div class='bottom-status-text'>
+            <span *ngIf="!isServerConnected">disconnected</span>
+            <span *ngIf="isServerConnected">connected</span>
+        </div>
+
+        <div>
+            <div class='status-lamp-container'>
+                <div class='status-lamp' [ngClass]="{
+                            'status-lamp-red': isServerConnected === false,
+                            'status-lamp-green': isServerConnected === true
+                        }">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

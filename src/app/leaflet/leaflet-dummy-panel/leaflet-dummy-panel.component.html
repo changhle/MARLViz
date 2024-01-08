@@ -1,0 +1,10 @@
+<div class='leaflet-control-container root-container'>
+    <div class='leaflet-control-header p-1'>
+        <span class='leaflet-control-header-text'>{{ label }}</span>
+        <button type="button" class='leaflet-btn-menu' (click)='onClickClose()'><span class='x-mark'>X</span></button>
+    </div>
+
+    <div *ngIf='dm.isDataLoaded' [ngStyle]="{'padding.px': padding}" (pointermove)='onPointerMoved($event)'>
+        Lorem
+    </div>
+</div>

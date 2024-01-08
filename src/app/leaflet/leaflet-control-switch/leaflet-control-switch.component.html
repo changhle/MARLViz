@@ -1,0 +1,8 @@
+<div class='leaflet-select-section'>
+    <a *ngFor='let s of switchables' class='leaflet-select-a' [ngClass]="{
+            'a-selected':s.isSelected === true,
+            'a-default':s.isSelected === false
+        }" (click)="onControlSwitchClick($event, s)">
+        <span class='font-dark'>{{ s.label }}</span>
+    </a>
+</div>
