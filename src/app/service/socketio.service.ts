@@ -65,8 +65,10 @@ export class SocketIOService {
             
             // this.view.userListView.initialize();
             // this.view.userListView.updateUI();
-            this.view.recordListView.initialize();
-            this.view.recordListView.updateUI();
+            // this.view.configView.initialize();
+            // this.view.configView.updateUI();
+            // this.view.recordListView.initialize();
+            // this.view.recordListView.updateUI();
             // this.view.recordSubView.initialize();
             // this.view.recordSubView.updateUI();
 

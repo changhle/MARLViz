@@ -14,6 +14,9 @@ import { RecordListViewComponent } from './record-list-view/record-list-view.com
 import { RecordSubViewComponent } from './record-sub-view/record-sub-view.component';
 import { TemporalViewComponent } from './temporal-view/temporal-view.component';
 import { WorkoutMatrixViewComponent } from './workout-matrix-view/workout-matrix-view.component';
+import { ConfigViewComponent } from './config-view/config-view.component';
+import { OverViewComponent } from './over-view/over-view.component';
+import { SummaryViewComponent } from './summary-view/summary-view.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +30,10 @@ import { WorkoutMatrixViewComponent } from './workout-matrix-view/workout-matrix
         RecordListViewComponent,
         TemporalViewComponent,
         WorkoutMatrixViewComponent,
-        RecordSubViewComponent
+        RecordSubViewComponent,
+        ConfigViewComponent,
+        OverViewComponent,
+        SummaryViewComponent
     ],
     imports: [
         BrowserModule,
