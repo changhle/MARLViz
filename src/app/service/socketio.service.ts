@@ -55,25 +55,37 @@ export class SocketIOService {
             // this.view.workoutMatrixView.initialize();
 
             this.setWaitingStatus(true, 'Loading dummy data ...');
-            this.socket.emit('user');
+            this.socket.emit('similarity');
         });
         
-        this.socket.on('user', (data) => {
-            console.log('SocketIO: user', data);
-            
-            DataManager.setStudent(data['snake_list']);
-            
-            // this.view.userListView.initialize();
-            // this.view.userListView.updateUI();
-            // this.view.configView.initialize();
-            // this.view.configView.updateUI();
-            // this.view.recordListView.initialize();
-            // this.view.recordListView.updateUI();
-            // this.view.recordSubView.initialize();
-            // this.view.recordSubView.updateUI();
-
+        this.socket.on('similarity', (data) => {
+            console.log(data);
+            DataManager.setSimilarity(data);
+            this.view.configView.initialize();
+            this.view.configView.updateUI();
+            this.view.summaryView.initialize();
+            this.view.summaryView.updateUI();
+            this.view.overView.initialize();
+            this.view.overView.updateUI();
+            this.view.detalView.initialize();
             this.setWaitingStatus(false);
         });
+        // this.socket.on('user', (data) => {
+        //     console.log('SocketIO: user', data);
+            
+            // DataManager.setStudent(data['snake_list']);
+            
+        //     // this.view.userListView.initialize();
+        //     // this.view.userListView.updateUI();
+        //     // this.view.configView.initialize();
+        //     // this.view.configView.updateUI();
+        //     // this.view.recordListView.initialize();
+        //     // this.view.recordListView.updateUI();
+        //     // this.view.recordSubView.initialize();
+        //     // this.view.recordSubView.updateUI();
+
+        //     this.setWaitingStatus(false);
+        // });
 
         // this.socket.on('user_workout_matrix', (data) => {
         //     console.log('SocketIO: user_workout_matrix', data);

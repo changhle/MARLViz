@@ -16,6 +16,7 @@ import { TemporalViewComponent } from './temporal-view/temporal-view.component';
 import { WorkoutMatrixViewComponent } from './workout-matrix-view/workout-matrix-view.component';
 import { ConfigViewComponent } from './config-view/config-view.component';
 import { OverViewComponent } from './over-view/over-view.component';
+import { DetailViewComponent } from './detail-view/detail-view.component';
 import { SummaryViewComponent } from './summary-view/summary-view.component';
 
 @NgModule({
@@ -33,6 +34,7 @@ import { SummaryViewComponent } from './summary-view/summary-view.component';
         RecordSubViewComponent,
         ConfigViewComponent,
         OverViewComponent,
+        DetailViewComponent,
         SummaryViewComponent
     ],
     imports: [

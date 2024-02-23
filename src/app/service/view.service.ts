@@ -8,6 +8,7 @@ import { RecordSubViewComponent } from '../record-sub-view/record-sub-view.compo
 import { TemporalViewComponent } from '../temporal-view/temporal-view.component';
 import { WorkoutMatrixViewComponent } from '../workout-matrix-view/workout-matrix-view.component';
 import { OverViewComponent } from '../over-view/over-view.component';
+import { DetailViewComponent } from '../detail-view/detail-view.component';
 import { SummaryViewComponent } from '../summary-view/summary-view.component';
 
 @Injectable({
@@ -19,6 +20,7 @@ export class ViewService {
     
     public configView: ConfigViewComponent;
     public overView: OverViewComponent;
+    public detalView: DetailViewComponent;
     public summaryView: SummaryViewComponent;
     public userListView: UserListViewComponent;
     public workoutMatrixView: WorkoutMatrixViewComponent;
